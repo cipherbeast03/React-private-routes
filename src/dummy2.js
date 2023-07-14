@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Outlet, Navigate } from 'react-router-dom';
 
-const PrivateRoutes = ({ component: Component, loggedIn, ...rest }) => {
-  const [token, setToken] = useState('');
+const PrivateRoutes = () => {
   // useEffect(() => {
   //   localStorage.getItem('loggedIn');
   //   if ((loggedIn = true)) {
