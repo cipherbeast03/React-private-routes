@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Outlet, Navigate } from 'react-router-dom';
 
-const PrivateRoutes = () => {
+const PrivateRoutes = ({ component: Component, loggedIn, ...rest }) => {
   const [token, setToken] = useState('');
   // useEffect(() => {
   //   localStorage.getItem('loggedIn');
@@ -16,7 +16,6 @@ const PrivateRoutes = () => {
     <Outlet />
   ) : (
     <div>
-      {alert('Please login or sign up')}
       <Navigate to="/login" />
     </div>
   );
